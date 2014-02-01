@@ -1,0 +1,29 @@
+{
+  "name": "mvbs",
+  "version": "0.0.2",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-karma": "~0.6.2",
+    "grunt-angular-templates": "~0.5.1",
+    "matchdep": "~0.3.0",
+    "connect": "~2.12.0",
+    "grunt-uncss": "~0.1.9",
+    "grunt-assets-versioning": "~0.1.5",
+    "karma-html-reporter": "~0.1.1",
+    "grunt-ngmin": "0.0.3"
+  },
+
+  "scripts": {
+    "new": "npm run symrepos && npm run mkbowerrc && grunt scaffold",
+    "clean": "rm -rf app dist config tasks generated spec .gitignore",
+    "symrepos": "ln -s ~/node_modules node_modules && ln -s ~/bower_components bower_components",
+    "mkbowerrc": "echo '{\"directory\": \"bower_components\"}' > .bowerrc",
+    "commit": "cp package.json ../mvbs; cp bower.json ../mvbs; cp Gruntfile.js ../mvbs"
+  }
+}
