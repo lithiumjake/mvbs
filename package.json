@@ -20,10 +20,13 @@
   },
 
   "scripts": {
+    "ng": "npm run new && npm run cpng && npm run cpngrt",
     "new": "npm run symrepos && npm run mkbowerrc && grunt scaffold",
-    "clean": "rm -rf app dist config tasks generated spec .gitignore",
+    "clean": "rm -rf app dist config tasks generated spec vendor .gitignore bower_components node_modules .bowerrc",
     "symrepos": "ln -s ~/node_modules node_modules && ln -s ~/bower_components bower_components",
     "mkbowerrc": "echo '{\"directory\": \"bower_components\"}' > .bowerrc",
-    "commit": "cp package.json ../mvbs; cp bower.json ../mvbs; cp Gruntfile.js ../mvbs"
+    "commit": "cp package.json ../mvbs; cp bower.json ../mvbs; cp Gruntfile.js ../mvbs",
+    "cpng": "cp bower_components/angular/angular.min.js ./vendor",
+    "cpngrt": "cp bower_components/angular-route/angular-route.min.js ./vendor"
   }
 }
