@@ -9,8 +9,11 @@ module.exports = function(grunt) {
     },
    
     concat: {
+      options: {
+	separator: ';'
+      },
       dev: {
-	src: ['vendor/**/*.js', 'app/scripts/**/*.js'],
+	src: ['vendor/angular.min.js', 'vendor/**/*.js', 'app/scripts/**/*.js'],
 	dest: 'generated/js/app.js'
       }
     },
@@ -77,7 +80,7 @@ module.exports = function(grunt) {
       app: {
 	cwd: 'app',
 	src: 'templates/**/*.html',
-	dest: 'scripts/templates.js'
+	dest: 'app/scripts/templates.js'
       }
     },
 
