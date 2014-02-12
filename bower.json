@@ -11,6 +11,7 @@
     "angular-bootstrap": "~0.10.0",
     "font-awesome": "~4.0.3",
     "jquery": "2.1.0",
-    "angular-placeholders": "lithiumjake/angular-placeholders#gh-pages"
-  }  
+    "angular-placeholders": "lithiumjake/angular-placeholders#gh-pages",
+    "vue": "~0.8.5"
+  }
 }
